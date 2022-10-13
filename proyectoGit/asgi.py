@@ -1,5 +1,5 @@
 """
-ASGI config for pruebaGit project.
+ASGI config for proyectoGit project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.asgi import get_asgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'pruebaGit.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'proyectoGit.settings')
 
 application = get_asgi_application()
