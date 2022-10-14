@@ -6,6 +6,9 @@ class Persona(models.Model):
     nombre = models.CharField(max_length=300)
     apellido = models.CharField(max_length=300)
     edad =  models.IntegerField()
+    fecha_nacimiento = models.DateTimeField(null=True)
+    
+    
     
     
     
