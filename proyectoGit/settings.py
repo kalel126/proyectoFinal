@@ -56,7 +56,10 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         #'DIRS': [BASE_DIR / 'templates'],
-        'DIRS': [r'C:\Users\ck_ka\OneDrive\Documentos\ProyectoFinal\proyectoGit\templates'],
+        #'DIRS': ['templates'],
+        #'DIRS': [BASE_DIR],
+        'DIRS': [],
+        #'DIRS': [r'C:\Users\ck_ka\OneDrive\Documentos\ProyectoFinal\proyectoGit\templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
