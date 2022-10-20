@@ -1,16 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <p>Listado de personas</p>
-    {% for persona in personas %}
-        <li> {{persona.nombre}}{{persona.apellido}}{{persona.edad}}</li>
-    {% endfor %}
+{% extends 'home/base.html' %}
 
-</body>
-</html>
+
+
+
+
+{% block titulo_pagina %}
+        
+        <title>Ver Personas</title>
+        
+{% endblock titulo_pagina %}
+
+{% block mi_contenido %}
+
+
+    <!-- Masthead-->
+    <header class="masthead">
+        
+        <p>Listado de personas</p>
+        {% for persona in personas %}
+            <li> {{persona.nombre}}{{persona.apellido}}{{persona.edad}}</li>
+        {% endfor %}
+    </header>
+
+{% endblock mi_contenido %}
