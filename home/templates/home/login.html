@@ -1,0 +1,25 @@
+{% extends 'home/base.html' %}
+
+
+
+
+
+{% block titulo_pagina %}
+        
+        <title>LOGIN</title>
+        
+{% endblock titulo_pagina %}
+
+{% block mi_contenido %}
+
+
+    <!-- Masthead-->
+    <header class="masthead">
+        <p>LOGIN DE ADMINISTRADOR</p>
+        {% for persona in personas %}
+            <li> {{persona.nombre}}{{persona.apellido}}{{persona.edad}}</li>
+        {% endfor %}
+
+    </header>
+
+{% endblock mi_contenido %}

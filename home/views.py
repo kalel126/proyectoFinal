@@ -60,3 +60,24 @@ def ver_personas(request):
 
 def index(request):
     return render (request, 'home/index.html')
+
+
+
+def productos(request):
+    return render (request, 'home/productos.html')
+
+
+def abautus(request):
+    return render (request, 'home/abautus.html')
+
+
+def login(request):
+    return render (request, 'home/login.html')
+
+
+def admon_productos(request):
+    return render (request, 'home/admon_productos.html')
+
+
+def crear_productos(request):
+    return render (request, 'home/crear_productos.html')

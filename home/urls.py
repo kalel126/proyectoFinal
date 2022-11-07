@@ -5,6 +5,14 @@ from home import views
 urlpatterns = [
     
     path('',  views.index, name='index'),
+    path('productos/',  views.productos, name='productos'),
+    path('abautus/',  views.abautus, name='abautus'),
+    path('login/',  views.login, name='login'),
+    path('admon_productos/',  views.admon_productos, name='admon_productos'),
+    path('crear_productos/',  views.crear_productos, name='crear_productos'),
+    
+    
+    
     path('hola/',  views.hola),
     path('fecha/',  views.fecha, name='fecha'),
     path('mi-template/',  views.mi_template),

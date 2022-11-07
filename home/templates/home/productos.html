@@ -1,0 +1,25 @@
+{% extends 'home/base.html' %}
+
+
+
+
+
+{% block titulo_pagina %}
+        
+        <title>PRODUCTOS</title>
+        
+{% endblock titulo_pagina %}
+
+{% block mi_contenido %}
+
+
+    <!-- Masthead-->
+    <header class="masthead">
+        <p>LISTAR PRODUCTOS EXISTENTES</p>
+        {% for persona in personas %}
+            <li> {{persona.nombre}}{{persona.apellido}}{{persona.edad}}</li>
+        {% endfor %}
+
+    </header>
+
+{% endblock mi_contenido %}

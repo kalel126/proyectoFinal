@@ -1,0 +1,25 @@
+{% extends 'home/base.html' %}
+
+
+
+
+
+{% block titulo_pagina %}
+        
+        <title>ADMINISTRAR PRODUCTOS</title>
+        
+{% endblock titulo_pagina %}
+
+{% block mi_contenido %}
+
+
+    <!-- Masthead-->
+    <header class="masthead">
+        <p>ADMINISTRAR PRODUCTOS, ALTAS BAJAS</p>
+       
+
+        <a class="navbar-brand" href={% url 'crear_productos' %}>CREAR PRODUCTO |</a>
+
+    </header>
+
+{% endblock mi_contenido %}
