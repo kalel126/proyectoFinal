@@ -13,3 +13,8 @@ class Persona(models.Model):
 
     
     
+class Nproducto(models.Model):
+    prenda = models.CharField(max_length=300)
+    material = models.CharField(max_length=300)
+    costo =  models.IntegerField()
+    existencia = models.IntegerField()
