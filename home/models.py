@@ -13,8 +13,11 @@ class Persona(models.Model):
 
     
     
-class Nproducto(models.Model):
+class Producto(models.Model):
     prenda = models.CharField(max_length=300)
     material = models.CharField(max_length=300)
-    costo =  models.IntegerField()
-    existencia = models.IntegerField()
+    costo =  models.CharField(max_length=300)
+    existencia = models.CharField(max_length=300)
+    
+    def __str__(self):
+        return f'{self.prenda} {self.material} {self.costo} {self.existencia}'

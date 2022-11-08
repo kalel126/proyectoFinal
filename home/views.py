@@ -5,7 +5,7 @@ from datetime import datetime, timedelta
 from django.template import Context, Template, loader
 import random
 from home.models import Persona
-from home.models import Nproducto
+from home.models import Producto
 from django.shortcuts import render 
 
 
@@ -87,12 +87,12 @@ def crear_productos(request):
 def crear_productos(request):
     #persona = Persona(nombre=nombre, apellido=apellido, edad=random.randrange(1,99), fecha_nacimiento=datetime.now())
     #persona.save()
-    print('POST')
-    print(request.POST)
+    #print('POST')
+    #print(request.POST)
     prenda = request.POST.get('prenda')
     material = request.POST.get('material')
     costo = request.POST.get('costo')
     existencia = request.POST.get('existencia')
-    producto = Nproducto(prenda=prenda, material=material, costo=costo, existencia=existencia)
+    producto = Producto(prenda=prenda, material=material, costo=costo, existencia=existencia)
     producto.save()
     return render (request, 'home/crear_productos.html', {})
