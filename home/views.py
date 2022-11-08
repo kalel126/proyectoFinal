@@ -80,8 +80,6 @@ def admon_productos(request):
     return render (request, 'home/admon_productos.html')
 
 
-#def crear_productos(request):
-#    return render (request, 'home/crear_productos.html')
 
 
 def crear_productos(request):
@@ -90,10 +88,20 @@ def crear_productos(request):
         print('POST')
         print(request.POST)
         prenda = request.POST.get('prenda')
+        marca = request.POST.get('marca')
         material = request.POST.get('material')
         costo = request.POST.get('costo')
         existencia = request.POST.get('existencia')
-        producto = Producto(prenda=prenda, material=material, costo=costo, existencia=existencia)
+        producto = Producto(prenda=prenda, marca=marca, material=material, costo=costo, existencia=existencia)
         producto.save()
+        return render (request, 'home/admon_productos.html', {})
         
     return render (request, 'home/crear_productos.html', {})
+
+
+
+def ver_productos(request):
+    #personas =  Persona.objects.all()
+    #return render (request, 'home/ver_personas.html', {'personas': personas})
+    productos = Producto.objects.all()
+    return render (request, 'home/ver_productos.html', {'productos' : productos})

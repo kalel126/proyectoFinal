@@ -1,0 +1,54 @@
+{% extends 'home/base.html' %}
+
+
+
+
+
+{% block titulo_pagina %}
+        
+        <title>LISTADO DE PRODUCTOS</title>
+        
+{% endblock titulo_pagina %}
+
+{% block mi_contenido %}
+
+
+    <!-- Masthead-->
+    <header class="masthead">
+        
+        <p>Productos disponibles</p>
+        <center>
+        <table class="default">
+
+            <tr>
+            <colgroup>
+                <col  colspan="2">
+                    <th scope="col">  ID  </th>
+                    <th scope="col">  PRODUCTO  </th>
+                    <th scope="col">  MARCA  </th>
+                    <th scope="col">  MATERIAL  </th>
+                    <th scope="col">  COSTO  </th>
+                    <th scope="col">  EXISTENCIA  </th>
+                </col>
+            </colgroup>
+            </tr>
+            
+                
+                 {% for producto in productos %}
+                 <tr>
+                 
+                 <th>{{producto.id}}</th>
+                 <th>{{producto.prenda}}</th>
+                 <th>{{producto.marca}}</th> 
+                 <th>{{producto.material}}</th> 
+                 <th>${{producto.costo}}</th> 
+                 <th>{{producto.existencia}}</th>
+                </tr>
+                {% endfor %}
+            
+            
+        </table>
+    </center>
+    </header>
+
+{% endblock mi_contenido %}
