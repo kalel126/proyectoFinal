@@ -17,9 +17,17 @@
     <header class="masthead">
         <p>ADMINISTRAR PRODUCTOS, ALTAS BAJAS</p>
        
-
-        <a class="navbar-brand" href={% url 'crear_productos' %}>CREAR PRODUCTO |</a>
-
+        <ol>
+            <li>
+                <a class="navbar-brand" href={% url 'crear_productos' %}> * CREAR PRODUCTO </a>
+            </li>
+            <li>
+                <a class="navbar-brand" href={% url 'ver_productos' %}>* COLSULTAR PRODUCTO </a>
+            </li>
+            <li>
+                <a class="navbar-brand" href={% url 'crear_productos' %}>* MODIFICAR PRODUCTO </a>
+            </li>
+        </ol>
     </header>
 
 {% endblock mi_contenido %}
