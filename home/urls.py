@@ -6,9 +6,9 @@ urlpatterns = [
     
     path('',  views.index, name='index'),
     path('productos/',  views.productos, name='productos'),
-    path('abautus/',  views.abautus, name='abautus'),
+    path('aboutus/',  views.aboutus, name='aboutus'),
     path('login/',  views.login, name='login'),
-    path('admon_productos/',  views.admon_productos, name='admon_productos'),
+    path('admin_productos/',  views.admin_productos, name='admin_productos'),
     path('crear_productos/',  views.crear_productos, name='crear_productos'),
     
     
